@@ -21,8 +21,7 @@
   left: -15px;
 
   opacity: 0;
-  animation: pulse 3s linear;
-  animation-iteration-count: infinite;
+  animation: StatusDot__pulse 3s linear infinite;
 
   width: 30px;
   height: 30px;
@@ -34,7 +33,7 @@
   animation-iteration-count: 0;
 }
 
-@keyframes pulse {
+@keyframes StatusDot__pulse {
   0% {
     transform: scale(0);
     opacity: 0;
