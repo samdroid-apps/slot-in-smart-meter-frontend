@@ -21,10 +21,16 @@ const Header = () => {
 
 interface IProps {
   onActivateDetails: (name: string) => any,
+  blur: boolean,
 }
 class Home extends React.PureComponent<IProps> {
   public render() {
-    return <div className="Home">
+    const {
+      onActivateDetails,
+      blur,
+    } = this.props;
+
+    return <div className={ "Home" + (blur ? " Home--blur" : "") }>
       <Header />
       <div className="HomeTitle HomeTitle--first">
         Cormac,<br/>
@@ -34,7 +40,7 @@ class Home extends React.PureComponent<IProps> {
       <div className="HomeTitle">
         you're got <b>three</b> devices:
       </div>
-      <HomeTable onActivateDetails={this.props.onActivateDetails} />
+      <HomeTable onActivateDetails={onActivateDetails} />
     </div>;
   }
 }

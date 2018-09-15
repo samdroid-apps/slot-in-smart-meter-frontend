@@ -1,3 +1,10 @@
+.Home {
+  transition: 250ms ease all;
+}
+.Home--blur {
+  filter: blur(3px);
+  pointer-events: none
+}
 
 .Header {
   background: linear-gradient(30deg, #3d550c, #81b622);
