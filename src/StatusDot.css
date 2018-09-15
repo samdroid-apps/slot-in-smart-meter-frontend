@@ -1,0 +1,50 @@
+.StatusDot {
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+.StatusDot__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+  background-color: #81b622;
+}
+.StatusDot--off .StatusDot__dot {
+  background-color: black;
+  opacity: 0.6;
+}
+.StatusDot__pulse {
+  z-index: 1;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+
+  opacity: 0;
+  animation: pulse 3s linear;
+  animation-iteration-count: infinite;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+  border: 5px solid #81b622;
+}
+.StatusDot--off .StatusDot__pulse {
+  animation-iteration-count: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

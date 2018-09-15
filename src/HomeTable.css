@@ -1,0 +1,42 @@
+.HomeTable {
+  width: 600px;
+  margin: auto;
+}
+
+.HomeTableRow {
+  display: flex;
+  width: 100%;
+  padding: 10px 30px;
+  align-items: center;
+  width: 520px;
+}
+.HomeTableRow--normal {
+  margin-top: 20px;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,.2);
+  border-radius: 30px;
+  transition: 150ms ease all;
+  cursor: pointer;
+}
+.HomeTableRow--normal:hover {
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.4);
+}
+.HomeTableRow--normal:active {
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.4);
+}
+.HomeTableRow--header {
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+.HomeTableRow__cell--icon {
+  width: 40px;
+}
+.HomeTableRow__cell--name {
+  padding-left: 10px;
+  flex-grow: 1;
+}
+.HomeTableRow__cell--status {
+  padding-left: 10px;
+}
