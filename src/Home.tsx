@@ -45,7 +45,7 @@ class Home extends React.PureComponent<IProps> {
       </div>
       <UsageGraph />
       <div className="HomeTitle">
-        you're got <b>three</b> devices:
+        you've got <b>three</b> devices:
       </div>
       <HomeTable onActivateDetails={onActivateDetails} />
       <Footer />
