@@ -13,7 +13,7 @@ class App extends React.Component<{}, IState> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      detailsActive: false,
+      detailsActive: window.location.hash === '#details',
     }
   }
 
@@ -37,12 +37,14 @@ class App extends React.Component<{}, IState> {
     this.setState({
       detailsActive: true,
     });
+    window.location.hash = 'details';
   }
 
   private handleCloseDetails = () => {
     this.setState({
       detailsActive: false,
     });
+    window.location.hash = 'home';
   }
 }
 
